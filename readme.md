@@ -1,4 +1,4 @@
-# StoryBooks
+# CloudTales
 
 <!-- TABLE OF CONTENTS -->
 

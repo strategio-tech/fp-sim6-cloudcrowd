@@ -6,6 +6,14 @@ p {
   width: 400px;
   margin-top: 50px;
   text-align: center;
+  transition: fadeIn 0.3s;
+}
+
+.story-bg {
+  background-image: url("../images/sigmund-mmPK8J0XpAM-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .fa-small {
@@ -19,4 +27,13 @@ p {
 
 .img-small {
   width: 180px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

@@ -31,6 +31,7 @@ This app uses Node.js/Express/MongoDB with Google OAuth for authentication
 
 <!-- ARCHITECTURE DIAGRAM -->
 ## Architecture Diagram
+[CloudTales CI_CD pipeline.pdf](https://github.com/strategio-tech/fp-sim6-cloudcrowd/files/10426933/CloudTales.CI_CD.pipeline.pdf)
 
 <!-- FEATURES -->
 ## Features
@@ -63,3 +64,4 @@ npm start
 - [@C0ding-K1D](https://github.com/C0ding-K1D)
 - [@alejandroklever](https://github.com/alejandroklever)
 - [@avrahamMayerfeld](https://github.com/avrahamMayerfeld)
+

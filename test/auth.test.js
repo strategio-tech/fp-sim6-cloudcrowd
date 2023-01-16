@@ -1,10 +1,102 @@
 const ensureAuth = require("../middleware/auth").ensureAuth;
-const assert = require("chai").assert;
+const ensureGuest = require("../middleware/auth").ensureGuest;
 const truncate = require("../helpers/hbs").truncate;
 const formatDate = require("../helpers/hbs").formatDate;
 const stripTags = require("../helpers/hbs").stripTags;
 const editIcon = require("../helpers/hbs").editIcon;
 const select = require("../helpers/hbs").select;
+const chai = require("chai");
+const expect = chai.expect;
+const assert = chai.assert;
+const on = require("chai").use(require("chai-spies"));
+
+describe("ensureAuth", () => {
+  it("should call next() if the request is authenticated", () => {
+    // Stub the req object
+    const req = {
+      isAuthenticated: () => true,
+    };
+
+    // Stub the res object
+    const res = {
+      redirect: (path) => {},
+    };
+
+    // Spy on the redirect function
+    const spy = chai.spy.on(res, "redirect");
+
+    // Call the ensureAuth function
+    ensureAuth(req, res, () => {});
+
+    // Assert that the redirect function was not called
+    expect(spy).to.not.have.been.called();
+  });
+
+  it("should redirect to '/' if the request is not authenticated", () => {
+    // Stub the req object
+    const req = {
+      isAuthenticated: () => false,
+    };
+
+    // Stub the res object
+    const res = {
+      redirect: (path) => {},
+    };
+
+    // Spy on the redirect function
+    const spy = chai.spy.on(res, "redirect");
+
+    // Call the ensureAuth function
+    ensureAuth(req, res, () => {});
+
+    // Assert that the redirect function was called with the '/' path
+    expect(spy).to.have.been.called.with("/");
+  });
+});
+
+describe("ensureGuest", () => {
+  it("should call next() if the request is not authenticated", () => {
+    // Stub the req object
+    const req = {
+      isAuthenticated: () => false,
+    };
+
+    // Stub the res object
+    const res = {
+      redirect: (path) => {},
+    };
+
+    // Spy on the redirect function
+    const spy = chai.spy.on(res, "redirect");
+
+    // Call the ensureGuest function
+    ensureGuest(req, res, () => {});
+
+    // Assert that the redirect function was not called
+    expect(spy).to.not.have.been.called();
+  });
+
+  it("should redirect to '/dashboard' if the request is authenticated", () => {
+    // Stub the req object
+    const req = {
+      isAuthenticated: () => true,
+    };
+
+    // Stub the res object
+    const res = {
+      redirect: (path) => {},
+    };
+
+    // Spy on the redirect function
+    const spy = chai.spy.on(res, "redirect");
+
+    // Call the ensureGuest function
+    ensureGuest(req, res, () => {});
+
+    // Assert that the redirect function was called with the '/dashboard' path
+    expect(spy).to.have.been.called.with("/dashboard");
+  });
+});
 
 describe("test storybooks", function () {
   it("test formatDate", function (done) {

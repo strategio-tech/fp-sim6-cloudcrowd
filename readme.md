@@ -1,9 +1,12 @@
 # CloudTales
+<!-- PROJECT LOGO -->
+<div align="center">
+<img src="https://user-images.githubusercontent.com/101753940/212770475-f84e8018-cb77-4896-b04f-d4728b6a966e.png" alt="Cloud Crowd Logo" style="width:400px">
+</div>
 
 <!-- TABLE OF CONTENTS -->
 
 ## Table of Contents
-
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
@@ -31,7 +34,9 @@ This app uses Node.js/Express/MongoDB with Google OAuth for authentication
 
 <!-- ARCHITECTURE DIAGRAM -->
 ## Architecture Diagram
-[CloudTales CI_CD pipeline (1).pdf](https://github.com/strategio-tech/fp-sim6-cloudcrowd/files/10427093/CloudTales.CI_CD.pipeline.1.pdf)
+<div align="center">
+<img src="https://user-images.githubusercontent.com/101753940/212771236-96758496-23f8-4548-8d8a-2927df738f9a.png" alt="Architecture Diagram" style="width:700px">
+</div>
 
 
 <!-- FEATURES -->

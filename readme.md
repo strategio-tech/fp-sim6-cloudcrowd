@@ -35,8 +35,9 @@ This app uses Node.js/Express/MongoDB with Google OAuth for authentication
 <!-- ARCHITECTURE DIAGRAM -->
 ## Architecture Diagram
 <div align="center">
-<img src="https://user-images.githubusercontent.com/101753940/212771236-96758496-23f8-4548-8d8a-2927df738f9a.png" alt="Architecture Diagram" style="width:700px">
+<img src="[CloudTales CI_CD pipeline (2).pdf](https://github.com/strategio-tech/fp-sim6-cloudcrowd/files/10430048/CloudTales.CI_CD.pipeline.2.pdf)" alt="Architecture Diagram" style="width:700px">
 </div>
+
 
 
 <!-- FEATURES -->

@@ -4,7 +4,7 @@ import { stripTags } from '../helpers/hbs'
 import { editIcon } from '../helpers/hbs'
 import { select } from '../helpers/hbs'
 
-import { jest, expect } from '@jest/globals'
+import { expect } from '@jest/globals'
 
 describe('test storybooks', () => {
   test('test formatDate', () => {

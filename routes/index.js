@@ -1,9 +1,9 @@
-import { Router } from 'express'
-import { ensureAuth, ensureGuest } from '../middleware/auth'
+const express = require('express')
 
-import { find } from '../models/Story'
+const { ensureAuth, ensureGuest } = require('../middleware/auth')
+const Story = require('../models/Story')
 
-const router = Router()
+const router = express.Router()
 
 // @desc    Login/Landing page
 // @route   GET /
@@ -17,7 +17,7 @@ router.get('/', ensureGuest, (req, res) => {
 // @route   GET /dashboard
 router.get('/dashboard', ensureAuth, async (req, res) => {
   try {
-    const stories = await find({ user: req.user.id }).lean()
+    const stories = await Story.find({ user: req.user.id }).lean()
     res.render('dashboard', {
       name: req.user.firstName,
       stories,
@@ -28,4 +28,4 @@ router.get('/dashboard', ensureAuth, async (req, res) => {
   }
 })
 
-export default router
+module.exports = router

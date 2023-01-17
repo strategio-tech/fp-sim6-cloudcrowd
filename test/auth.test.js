@@ -1,11 +1,7 @@
 import { ensureAuth } from '../middleware/auth'
 import { ensureGuest } from '../middleware/auth'
-import chai from 'chai'
-import chaiSpies from 'chai-spies'
-// const { expect, assert } = chai
-import { jest, expect, assert } from '@jest/globals'
 
-chai.use(chaiSpies)
+import { jest, expect } from '@jest/globals'
 
 describe('ensureAuth', () => {
   test('should call next() if the request is authenticated', () => {
@@ -16,7 +12,7 @@ describe('ensureAuth', () => {
 
     // Stub the res object
     const res = {
-      redirect: (path) => {},
+      redirect: (_path) => {},
     }
 
     // Spy on the redirect function
@@ -37,7 +33,7 @@ describe('ensureAuth', () => {
 
     // Stub the res object
     const res = {
-      redirect: (path) => {},
+      redirect: (_path) => {},
     }
 
     // Spy on the redirect function
@@ -49,9 +45,7 @@ describe('ensureAuth', () => {
     // Assert that the redirect function was called with the '/' path
     expect(spy).toBeCalledWith('/')
   })
-})
-
-describe('ensureGuest', () => {
+  
   test('should call next() if the request is not authenticated', () => {
     // Stub the req object
     const req = {
@@ -60,7 +54,7 @@ describe('ensureGuest', () => {
 
     // Stub the res object
     const res = {
-      redirect: (path) => {},
+      redirect: (_path) => {},
     }
 
     // Spy on the redirect function
@@ -81,7 +75,7 @@ describe('ensureGuest', () => {
 
     // Stub the res object
     const res = {
-      redirect: (path) => {},
+      redirect: (_path) => {},
     }
 
     // Spy on the redirect function

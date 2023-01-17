@@ -11,34 +11,34 @@ const MongoStore = require('connect-mongo')
 const connectDB = require('./config/db')
 
 // Load config
-dotenv.config({ path: './config/config.env' })
+dotenv.config({ path: "./config/config.env" });
 
 // Passport config
-require('./config/passport')(passport)
+require("./config/passport")(passport);
 
-connectDB()
+connectDB();
 
-const app = express()
+const app = express();
 
 // Body parser
-app.use(express.urlencoded({ extended: false }))
-app.use(express.json())
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 // Method override
 app.use(
   methodOverride(function (req, res) {
-    if (req.body && typeof req.body === 'object' && '_method' in req.body) {
+    if (req.body && typeof req.body === "object" && "_method" in req.body) {
       // look in urlencoded POST bodies and delete it
-      let method = req.body._method
-      delete req.body._method
-      return method
+      let method = req.body._method;
+      delete req.body._method;
+      return method;
     }
   })
-)
+);
 
 // Logging
-if (process.env.NODE_ENV === 'development') {
-  app.use(morgan('dev'))
+if (process.env.NODE_ENV === "development") {
+  app.use(morgan("dev"));
 }
 
 // Handlebars Helpers
@@ -48,11 +48,11 @@ const {
   truncate,
   editIcon,
   select,
-} = require('./helpers/hbs')
+} = require("./helpers/hbs");
 
 // Handlebars
 app.engine(
-  '.hbs',
+  ".hbs",
   exphbs({
     helpers: {
       formatDate,
@@ -61,41 +61,47 @@ app.engine(
       editIcon,
       select,
     },
-    defaultLayout: 'main',
-    extname: '.hbs',
+    defaultLayout: "main",
+    extname: ".hbs",
   })
-)
-app.set('view engine', '.hbs')
+);
+app.set("view engine", ".hbs");
 
 // Sessions
 app.use(
   session({
-    secret: 'keyboard cat',
+    secret: "keyboard cat",
     resave: false,
     saveUninitialized: false,
     store: MongoStore.create({ mongoUrl: process.env.MONGO_URI }),
   })
-)
+);
 
 // Passport middleware
-app.use(passport.initialize())
-app.use(passport.session())
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Set global var
 app.use(function (req, res, next) {
-  res.locals.user = req.user || null
-  next()
-})
+  res.locals.user = req.user || null;
+  next();
+});
 
 // Static folder
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static("public"));
+// app.use(express.static("images"));
+
+// Route to display static src images
+app.get("/static", (req, res) => {
+  res.render("static");
+});
 
 // Routes
-app.use('/', require('./routes/index'))
-app.use('/auth', require('./routes/auth'))
-app.use('/stories', require('./routes/stories'))
+app.use("/", require("./routes/index"));
+app.use("/auth", require("./routes/auth"));
+app.use("/stories", require("./routes/stories"));
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000;
 
 const server = app.listen(
   PORT,

@@ -1,9 +1,12 @@
 # CloudTales
+<!-- PROJECT LOGO -->
+<div align="center">
+<img src="https://user-images.githubusercontent.com/101753940/212770475-f84e8018-cb77-4896-b04f-d4728b6a966e.png" alt="Cloud Crowd Logo" style="width:400px">
+</div>
 
 <!-- TABLE OF CONTENTS -->
 
 ## Table of Contents
-
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
@@ -31,6 +34,10 @@ This app uses Node.js/Express/MongoDB with Google OAuth for authentication
 
 <!-- ARCHITECTURE DIAGRAM -->
 ## Architecture Diagram
+<div align="center">
+<img src="https://user-images.githubusercontent.com/101753940/212771236-96758496-23f8-4548-8d8a-2927df738f9a.png" alt="Architecture Diagram" style="width:700px">
+</div>
+
 
 <!-- FEATURES -->
 ## Features
@@ -63,3 +70,4 @@ npm start
 - [@C0ding-K1D](https://github.com/C0ding-K1D)
 - [@alejandroklever](https://github.com/alejandroklever)
 - [@avrahamMayerfeld](https://github.com/avrahamMayerfeld)
+

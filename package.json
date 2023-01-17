@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node ./app.js",
-    "test": "jest",
-    "postinstall": "node ./scripts/post-install.js"
+    "postinstall": "node ./scripts/post-install.js",
+    "test": "jest"
   },
   "author": "Brad Traversy",
   "license": "MIT",
@@ -25,7 +25,13 @@
     "passport-google-oauth20": "^2.0.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "chai": "^4.3.7",
+    "chai-spies": "^1.0.0",
     "jest": "^29.3.1",
+    "mocha": "^10.2.0",
     "nodemon": "^2.0.4"
   }
 }

@@ -1,12 +1,27 @@
 p {
   margin: 10px 0 !important;
 }
+.logo {
+  height: 300px;
+  width: 300px;
+  margin: 0 auto;
+  background-image: url("./images/cloudtales2.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .login-container {
+  background-color: #123c4c;
   width: 400px;
   margin-top: 50px;
   text-align: center;
   animation: fadeIn 2s;
+}
+
+.card-bg {
+  background-color: #123c4c;
+  color: #fff;
 }
 
 .story-bg {

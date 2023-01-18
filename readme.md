@@ -60,7 +60,7 @@ The process for creating, designing, and monitoring the software application.
 <!-- ARCHITECTURE DIAGRAM -->
 #### Architecture Diagram
 <div align="center">
-<img src="https://user-images.githubusercontent.com/101753940/213265471-88179740-862b-4cbe-9dea-1e661158ec12.jpg" alt="Architecture Diagram" style="width:700px">
+<img src="https://user-images.githubusercontent.com/44050391/213292281-d5e959b3-7976-45a1-a580-eab308ecfcd4.png" alt="Architecture Diagram" style="width:700px">
 </div>
 
 

@@ -58,52 +58,25 @@ npm install
 ### Building
 The process for creating, designing, and monitoring the software application.
 <!-- ARCHITECTURE DIAGRAM -->
-## Architecture Diagram
+#### Architecture Diagram
 <div align="center">
-<img src="[CloudTales CI_CD pipeline (2).pdf](https://github.com/strategio-tech/fp-sim6-cloudcrowd/files/10430048/CloudTales.CI_CD.pipeline.2.pdf)" alt="Architecture Diagram" style="width:700px">
+<img src="https://user-images.githubusercontent.com/101753940/213265471-88179740-862b-4cbe-9dea-1e661158ec12.jpg" alt="Architecture Diagram" style="width:700px">
 </div>
 
 
 ### Deploying / Publishing
 
-In case there's some step you have to take that publishes this project to a
-server, this is the right time to state it.
-
-```shell
-packagemanager deploy awesome-project -s server.com -u username -p password
-```
-
-And again you'd need to tell what the previous code actually does.
+- AWS CodeDeploy is used to automate our applications deployments and set AWS Elastic Beanstalk as the deploy provider. For a step-by-step tutorial on how to use Beanstalk follow this guide https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/GettingStarted.html
+- AWS CloudWatch iss used to continue monitoring our application after it is successfully deployed. With CloudWatch we’re able to collect and track metrics, as well as, access log files for our application. For a step-by-step tutorial on how to use Cloudwatch follow this guide https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/GettingStarted.html
 
 ## Features
 
-What's all the bells and whistles this project can perform?
-* What's the main functionality
-* You can also do another thing
-* If you get really randy, you can even do this
+* User Authentication with Google OAuth 
+* Users can create as many personal stories to CloudTales privately for themselves to view or publicly for other users to view
+* Users are able to view other users' accounts to see their stories
+* Users can edit their personal stories
+* Users can delete their personal stories 
 
-## Configuration
-
-Here you should write what are all of the configurations a user can enter when
-using the project.
-
-#### Argument 1
-Type: `String`  
-Default: `'default value'`
-
-State what an argument does and how you can use it. If needed, you can provide
-an example below.
-
-Example:
-```bash
-awesome-project "Some other value"  # Prints "You're nailing this readme!"
-```
-
-#### Argument 2
-Type: `Number|Boolean`  
-Default: 100
-
-Copy-paste as many of these as you need.
 
 ## Contributing
 

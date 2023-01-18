@@ -56,18 +56,13 @@ npm install
 ```
 
 ### Building
+The process for creating, designing, and monitoring the software application.
+<!-- ARCHITECTURE DIAGRAM -->
+## Architecture Diagram
+<div align="center">
+<img src="[CloudTales CI_CD pipeline (2).pdf](https://github.com/strategio-tech/fp-sim6-cloudcrowd/files/10430048/CloudTales.CI_CD.pipeline.2.pdf)" alt="Architecture Diagram" style="width:700px">
+</div>
 
-If your project needs some additional steps for the developer to build the
-project after some code changes, state them here:
-
-```shell
-./configure
-make
-make install
-```
-
-Here again you should state what actually happens when the code above gets
-executed.
 
 ### Deploying / Publishing
 

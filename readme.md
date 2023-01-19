@@ -7,7 +7,7 @@
 
 We all have stories to tell, whether they’re personal memories or experiences we want to share with others. CloudTales is a new app that allows you to do just that. With CloudTales, you can create both public and private stories from your life and share them with the world.
 
-## Demo
+### **Live Demo**
 
 Visit our open demo: [Demo Home Page](http://restfulapp1-env.eba-k7cyv2pb.us-east-1.elasticbeanstalk.com/)
 

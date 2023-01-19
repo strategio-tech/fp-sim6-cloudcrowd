@@ -1,0 +1,75 @@
+* {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+p {
+  margin: 10px 0 !important;
+}
+
+/* .logo {
+  height: 300px;
+  width: 300px;
+  margin: 0 auto;
+  background-image: url("./images/cloudtales2.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
+
+.login-container {
+  background-color: #123c4c;
+  width: 400px;
+  margin-top: 200px;
+  text-align: center;
+  animation: fadeIn 2s;
+}
+
+.card-bg {
+  background-color: #123c4c;
+  color: #fff;
+}
+
+.story-bg {
+  background-image: url("./images/sigmund-mmPK8J0XpAM-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.fa-small {
+  font-size: 16px !important;
+}
+
+.btn-float {
+  float: left;
+  margin-right: 10px;
+}
+
+.img-small {
+  width: 180px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+td > a {
+  color: black;
+  text-transform: capitalize;
+}
+
+.dashboard-h3{
+  color: black;
+  padding-top: 0.5em;
+}
+.dashboard-p {
+  font-size: 1.5em;
+  text-transform: capitalize;
+  color: #26a69a;
+}
+

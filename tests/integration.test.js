@@ -1,8 +1,11 @@
+import {jest  } from "@jest/globals";
 import request from 'supertest'
 import mongoose from 'mongoose'
 import { app, server, store } from '../app.js'
 import connectDB from '../config/db.js'
 import User from '../models/User.js'
+
+jest.setTimeout(30000)
 
 describe('Integration', () => {
   beforeEach(async () => {

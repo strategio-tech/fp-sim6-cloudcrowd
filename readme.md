@@ -91,7 +91,6 @@ npm install
 
 ![Architecture Diagram](https://user-images.githubusercontent.com/44050391/213292281-d5e959b3-7976-45a1-a580-eab308ecfcd4.png)
 
-
 ### **Building**
 
 The process for creating, designing, and monitoring the software application.

@@ -1,10 +1,10 @@
+import { expect } from '@jest/globals'
+
 import { truncate } from '../helpers/hbs'
 import { formatDate } from '../helpers/hbs'
 import { stripTags } from '../helpers/hbs'
 import { editIcon } from '../helpers/hbs'
 import { select } from '../helpers/hbs'
-
-import { expect } from '@jest/globals'
 
 describe('test storybooks', () => {
   test('test formatDate', () => {

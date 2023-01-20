@@ -1,7 +1,7 @@
+import { jest, expect } from '@jest/globals'
+
 import { ensureAuth } from '../middleware/auth'
 import { ensureGuest } from '../middleware/auth'
-
-import { jest, expect } from '@jest/globals'
 
 describe('ensureAuth', () => {
   test('should call next() if the request is authenticated', () => {
@@ -45,7 +45,7 @@ describe('ensureAuth', () => {
     // Assert that the redirect function was called with the '/' path
     expect(spy).toBeCalledWith('/')
   })
-  
+
   test('should call next() if the request is not authenticated', () => {
     // Stub the req object
     const req = {
